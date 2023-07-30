@@ -2,8 +2,10 @@
     --headings-color:black;
     --font-color:#444;
     --font-color-search: #555;
-    --secondary-green-600: #16a34a;
     --secondary-green-200:#dcfce7;
+    --secondary-green-600: #16a34a;
+    --secondary-green-700:#15803d;
+    --secondary-green-800:#166534;
 }
 
 html{
@@ -64,7 +66,24 @@ input[type="search"]:focus {
 }
 
 .mediaBox img{
+    display: flex;
     width: 7rem;
     height:auto;
     margin: 0 30px;
+}
+
+.button{
+    margin: 10px 30px;
+    font-weight: 600;
+    border: none;
+    color: white;
+    background-color: var(--secondary-green-700);
+    padding: 1rem;
+    border-radius: 50px;
+    width: 125px;
+    transition: 0.2s;
+}
+
+.button:hover{
+    background-color: var(--secondary-green-800);
 }
