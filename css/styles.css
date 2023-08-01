@@ -17,12 +17,17 @@ html{
 
 body{
     background-color: #f0fdf4;
+    display: grid;
+    /* grid-template-columns: 1fr 3fr 1fr; */
+    grid-template-rows: 250px 2fr 1fr;
 }
 
 header{
     padding: 20px;
+    grid-column:2/4 ;
     background-color: white;
-    display: grid;
+    display: inline-grid;
+    align-self: start;
     grid-template-columns: 2fr 1fr;
     -webkit-box-shadow: 0px 4px 3px 0px rgba(0,0,0,0.10);
     -moz-box-shadow: 0px 4px 3px 0px rgba(0,0,0,0.10);
@@ -32,17 +37,18 @@ h2{
     margin: 0;
 }
 
+
 .searchBar{
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     margin-left: 2.5rem;
 }
 
 input[type="search"]{
-    width: 50rem;
+    width: 35rem;
     height:20px;
-    padding:25px;
+    padding:16px;
     border-radius: 100px;
     margin-left: 15px;
     border:none;
@@ -92,7 +98,7 @@ input[type="search"]:focus {
     display: flex;
     color: var(--headings-color);
     font-weight: 600;
-    margin-left: 1rem; /*To make the mediabox look aligned with the searchbar inside the header*/
+    /* margin-left: 1rem; To make the mediabox look aligned with the searchbar inside the header */
 }
 
 .mediaBox img{
@@ -123,4 +129,46 @@ input[type="search"]:focus {
 
 .button:hover{
     background-color: var(--secondary-green-800);
+}
+
+.sideBar{
+    display: flex;
+    flex-direction: column;
+    background: var(--secondary-green-800);
+    color: white;
+    padding: 20px;
+    grid-row: 1/4;
+    width: 220px;
+}
+
+.dashboardLogo h2{
+    display: inline;
+    margin-left: 10px;
+}
+
+.dashboardLogo img{
+    height: 30px;
+    width: auto;
+}
+
+.articleSection{
+    display: grid;
+    grid-row: 2/4;
+    grid-template-columns:repeat(2, 1fr) ;
+    gap: 20px;
+}
+
+.article{
+    box-shadow: 0px 0px 32px 0px rgba(0,0,0,0.1);
+    background: white;
+}
+
+.menuItemsGridOne, .menuItemsGridTwo{
+    margin-top: 2rem;
+}
+
+.menuItemsGridZero{
+    margin-top:20px;
+    display: flex;
+    align-items: center;
 }
