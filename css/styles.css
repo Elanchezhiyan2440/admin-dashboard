@@ -2,7 +2,9 @@
     --headings-color:black;
     --font-color:#444;
     --font-color-search: #555;
-    --secondary-green-200:#dcfce7;
+    --secondary-green-200:#cffcde;
+    --secondary-green-600: #6ee7b7;
+    --secondary-green-400: #4ade80;
     --secondary-green-600: #16a34a;
     --secondary-green-700:#15803d;
     --secondary-green-800:#166534;
@@ -14,15 +16,31 @@ html{
 }
 
 body{
-    /* background-color: orange; */
+    background-color: #f0fdf4;
+}
+
+header{
+    padding: 20px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    -webkit-box-shadow: 0px 4px 3px 0px rgba(0,0,0,0.10);
+    -moz-box-shadow: 0px 4px 3px 0px rgba(0,0,0,0.10);
+    box-shadow: 0px 4px 3px 0px rgba(0,0,0,0.10);}
+
+h2{
+    margin: 0;
 }
 
 .searchBar{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2.5rem;
 }
 
 input[type="search"]{
-    width: 35rem;
+    width: 50rem;
     height:20px;
     padding:25px;
     border-radius: 100px;
@@ -47,6 +65,15 @@ input[type="search"]:focus {
     display: grid;
     grid-template-columns:1fr 2fr 3fr ;
     gap: 20px;
+    align-items: start;
+    justify-items: center;
+}
+
+.userProfile h2{
+    justify-self: start;
+    align-self: center;
+    font-size: 1rem;
+    color: var(--headings-color);
 }
 
 .userImage{
@@ -57,19 +84,29 @@ input[type="search"]:focus {
 
 .bellIcon{
     margin-top:1.5rem ;
+    justify-self: end;
 }
 
 .mediaBox{
+    align-items: center;
     display: flex;
     color: var(--headings-color);
     font-weight: 600;
+    margin-left: 1rem; /*To make the mediabox look aligned with the searchbar inside the header*/
 }
 
 .mediaBox img{
+    border-radius: 50%;
+    padding-top:10px;
     display: flex;
-    width: 7rem;
-    height:auto;
+    width: auto;
+    height:7rem;
     margin: 0 30px;
+}
+
+.headerButtons{
+    display: flex;
+    align-items: flex-end;
 }
 
 .button{
